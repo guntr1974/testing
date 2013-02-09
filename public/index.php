@@ -5,7 +5,8 @@
 $Output = 'Nothing interesting to show here Capt\'n';
 
 function new_freephoneline_crypto_context($Key) {
-    $Key = substr(md5($Key), 0, 16);
+    $Key = md5($Key);
+    $Key = substr($Key, 0, 16);
     $IV = 'fedcba9876543210';
     if ($CryptoModule = mcrypt_module_open('rijndael-128', '', 'cbc', '')) {
         mcrypt_generic_init($CryptoModule, $Key, $IV);
