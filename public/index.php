@@ -2,12 +2,11 @@
 
 //This file is called index.php
 
-$Output = 'Nothing interesting to show here Capt\'n';
+$Output = 'Nothing interesting to show here Capt\n';
 
 function new_freephoneline_crypto_context($Key) {
     $Key = md5($Key);
-	echo $Key;
-//    $Key = substr($Key, 0, 16);
+    $Key = substr($Key, 0, 16);
     $IV = 'fedcba9876543210';
     if ($CryptoModule = mcrypt_module_open('rijndael-128', '', 'cbc', '')) {
         mcrypt_generic_init($CryptoModule, $Key, $IV);
