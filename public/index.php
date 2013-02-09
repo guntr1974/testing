@@ -16,8 +16,8 @@ function delete_freephoneline_crypto_context($CryptoModule) {
     mcrypt_module_close($CryptoModule);
 }
 
-$SIPUsername = '16042834338';
-$EncryptedSIPPassword = base64_decode('WhubSHQz2nqFNK/N0xGMvw==');
+$SIPUsername = '13438828274';
+$EncryptedSIPPassword = base64_decode('PwCwHO8qjQvsihu0Nv48VQ==');
 
 $Context = new_freephoneline_crypto_context($SIPUsername);
 $DecryptedPassword = mdecrypt_generic($Context, $EncryptedSIPPassword);
